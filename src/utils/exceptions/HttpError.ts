@@ -7,10 +7,10 @@ export class HttpError extends Error {
     this.status = status;
     this.name = this.constructor.name;
 
-    // Fix prototype chain for TypeScript
+    // Fix prototype chain
     Object.setPrototypeOf(this, HttpError.prototype);
 
-    // Capture correct stack trace (optional but recommended)
+    // Capture correct stack trace
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, this.constructor);
     }

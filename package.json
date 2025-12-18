@@ -10,7 +10,8 @@
     "start:dev": "pm2 start ecosystem.config.js --env development",
     "restart": "pm2 restart my-express-ts",
     "stop": "pm2 stop my-express-ts",
-    "logs": "pm2 logs my-express-ts"
+    "logs": "pm2 logs my-express-ts",
+    "test": "jest"
   },
   "keywords": [
     "node",
@@ -21,14 +22,21 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^25.0.0",
+    "@types/supertest": "^6.0.3",
     "dotenv": "^17.2.3",
+    "jest": "^30.2.0",
     "nodemon": "^3.1.11",
     "pm2": "^6.0.14",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.6",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }

@@ -1,5 +1,6 @@
 import { Express, Request, Response, Router } from "express";
 import publicRoutes from "./public";
+import authRoutes from "./auth";
 
 const API_VERSION = process.env.API_VERSION || "v1";
 const API_PREFIX = `/api/${API_VERSION}`
@@ -15,8 +16,7 @@ export const registerRoutes = (app: Express): void => {
 
   // register all route groups here
   router.use(publicRoutes);
-  // router.use("/users", userRoutes);
-  // router.use("/auth", authRoutes);
+  router.use("/auth", authRoutes);
 
   app.use(API_PREFIX, router);
 };
